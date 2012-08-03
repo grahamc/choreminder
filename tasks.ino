@@ -34,41 +34,52 @@ int disp_delay = 10;
 
 int dbg_led = 13;
 
-int task_cnt = 29;
+int task_cnt = 34;
 int task_loc = 99;
 
-char * tasks[30] = {
-/*"----------------\n----------------"*/
-    "Wipe front of\nappliances",
-  "Trash can",
-  "Tidy books,\nlinens",
-  "MISSING",
-  "Fridge, Freezer\nwipe & tidy",
-  "Wipe cabinets\n(front)",
-    "Mop floor",
-    "Wipe front of\nappliances",
-  "Utensil holders\nFridge top",
-  "Fridge, Stove\n(under)",
-  "Seals: disposal/\nfridge/washer",
-  "Windows, and\nSills",
-  "Wipe decorations",
-    "Mop floor",
-    "Wipe front of\nappliances",
-  "Tidy cabinets",
-  "Cycle cloths\nsponge",
-  "Cabinet\ninteriors",
-  "Wipe walls",
-  "Wipe cabinets\n(front)",
-    "Mop floor",
-    "Wipe front of\nappliances",
-  "Organize pots\npans, drawers",
-  "Scrub sink\nwipe faucet",
-  "Fridge, Freezer\nwipe & tidy",
-  "Clean microwave\nOven->Clean",
-  "Wipe\nbaseboards",
-    "Mop floor",
-    "Wipe front of\nappliances",
-  "Dust: switches,\nlights, vents"
+char * tasks[35] = {
+/*
+  "                \n              ",
+*/
+  "Wipe front of   \nappliances    ",
+  "Trash can       \n              ",
+  "Tidy books,     \nlinens        ",
+  "Organize the    \nfront closet  ",
+  "Fridge, Freezer \nwipe & tidy   ",
+  "Wipe cabinets   \n(front)       ",
+  "Mop floor       \n              ",
+  
+  "Wipe front of   \nappliances    ",
+  "Utensil holders \nFridge top    ",
+  "Fridge, Stove   \n(under)       ",
+  "Seals: disposal/\nfridge/washer ",
+  "Windows, and    \nSills         ",
+  "Wipe decorations\n              ",
+  "Mop floor       \n              ",
+  
+  "Wipe front of   \nappliances    ",
+  "Tidy cabinets   \n              ",
+  "Cycle cloths    \nsponge        ",
+  "Cabinet         \ninteriors     ",
+  "Wipe walls      \n              ",
+  "Wipe cabinets   \n(front)       ",
+  "Mop floor       \n              ",
+  
+  "Wipe front of   \nappliances    ",
+  "Organize pots   \npans, drawers ",
+  "Scrub sink      \nwipe faucet   ",
+  "Fridge, Freezer \nwipe & tidy   ",
+  "Clean microwave \nOven->Clean   ",
+  "Wipe            \nbaseboards    ",
+  "Mop floor       \n              ",
+  
+  "Wipe front of   \nappliances    ",
+  "Dust: switches, \nlights, vents ",
+  "Wipe down bike  \nsmears        ",
+  "Clean hallway   \nand stoop     ",
+  "Clean the mantel\n              ",
+  "Organize the    \nback closet   ",
+  "Mop floor       \n              "
 };
 
 boolean timer_enabled = false;
@@ -146,11 +157,7 @@ void loop()
   
   timer_tick();
   
-  if (screen_is_on) {
-    delay(100);
-  } else {
-    delay(1000);
-  }
+  delay(100);
 }
 
 void screen(boolean enable)
